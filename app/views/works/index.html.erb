@@ -1,0 +1,18 @@
+<h1>Work index</h1>
+
+<% @works.each do |work| %>
+
+  <p>title</p>
+  <span><%= work.title%></span>
+
+  <p>explanation</p>
+  <span><%= work.body %></span>
+
+  <p>image</p>
+  <% if work.image.attached? %>
+    <%= image_tag work.image, size: "200x200" %>
+  <% else %>
+    <%= image_tag 'no_image', size: "200x200" %>
+  <% end %>
+
+<% end %>

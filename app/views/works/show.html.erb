@@ -7,11 +7,7 @@
 <p><%= @work.body %></p>
 
 <h2>image</h2>
-<% if @work.image.attached? %>
-  <%= image_tag @work.image, size: "300x300" %>
-<% else %>
-  <%= image_tag 'no_image', size: "300x300" %>
-<% end %>
+<%= image_tag @work.image, size: "300x300" %>
 
 <%= link_to "編集", edit_work_path(@work.id) %>
 <%= link_to "削除", work_path(@work.id), method: :delete, "date-confirm" => "本当に削除しますか？" %>

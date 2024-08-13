@@ -6,29 +6,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/34c28f9202.js" crossorigin="anonymous"></script>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header>
-      <h1 class ="headline">
-        <%= link_to "amimono", root_path%>
-      <h1>
-    </header>
-    <nav>
-      <ul class="nav-list">
-        <li class ="nav-list-item">
-          <%= link_to "About", about_path %>
-        </li>
-        <li class="nav-list-item">
-          <%= link_to "Works", works_path %>
-        </li>
-        <li class ="nav-list-item">
-          <%= link_to "New Work", new_work_path %>
-        </li>
-      </ul>
-    </nav>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

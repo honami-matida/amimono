@@ -1,4 +1,4 @@
-class WorksController < ApplicationController
+class Public::WorksController < ApplicationController
 
   def new
     @work = Work.new

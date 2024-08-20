@@ -1,14 +1,24 @@
 <header>
+
+  <nav id="gnav" class="gnav mx-5">
+    <div id="gnav_list"><!--中にgnav_listレイヤーを作ると、長くてもスライドして表示出る -->
+      <%= render 'layouts/menu' %>
+    </div>
+  </nav>
+
+  <p class="openbtn">
+    <i class="fa-solid fa-bars"></i>
+  </p>
+
+  <%= javascript_pack_tag 'home/index' %>
+
   <nav class="navbar navbar-expand-lg navbar-light">
     <h1 class ="headline">
       <%= link_to root_path do %>
         <%= image_tag "logo.png", size: '150x150' %>
       <% end %>
     <h1>
-  </nav>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container">
-      <div class="mx-auto">
+
         <ul class="mb-0 d-flex align-items-center list-unstyled text-nowrap">
           <li class ="nav-list-item px-4 border-right">
             <%= link_to "About", about_path %>
@@ -20,7 +30,5 @@
             <%= link_to "New Work", new_work_path %>
           </li>
         </ul>
-      </div>
-    </div>
-  </nav>
+
 </header>

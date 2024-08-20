@@ -1,1 +1,98 @@
 @use '~bootstrap/scss/bootstrap';
+
+.gnav {
+  position: fixed;
+  left: -500px; /* メニューを画面外に隠す */
+  top: 0;
+  width: 350px;
+  height: 100%;
+  background: #333;
+  color: black;
+  transition: left 0.3s ease; /* スライドアニメーション */
+  z-index: 1000; /* メニューが他の要素より前面に表示されるようにする */
+}
+
+.gnav.list_active {
+  left: 0; /* メニューを表示 */
+}
+
+.openbtn {
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001; /* ボタンがメニューの上に表示されるようにする */
+  /* 必要に応じてボタンのスタイルを追加 */
+}
+
+.openbtn.active i {
+  /* ボタンがアクティブな時のアイコンのスタイルを追加 */
+}
+
+/*homes#top*/
+
+.img-box {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.img1, .img2, .img3, .img4, .img5 {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    background: center center no-repeat;
+    animation: anime 30s infinite;
+    z-index: 0;
+    opacity: 0;
+}
+
+.img1 {
+    background-image: url('/assets/amimono_works/work1.png');
+    animation-delay: 0s;
+}
+.img2 {
+    background-image: url('/assets/amimono_works/work2.png');
+    animation-delay: 6s;
+}
+.img3 {
+    background-image: url('/assets/amimono_works/work3.png');
+    animation-delay: 12s;
+}
+.img4 {
+    background-image: url('/assets/amimono_works/work4.png');
+    animation-delay: 18s;
+}
+.img5 {
+    background-image: url('/assets/amimono_works/work5.png');
+    animation-delay: 24s;
+}
+
+@keyframes anime {
+    0% {
+        opacity: 1;
+        z-index: 10;
+    }
+    20% {
+        opacity: 1;
+        z-index: 10;
+    }
+    40% {
+        opacity: 1;
+        z-index: 10;
+    }
+    60% {
+        opacity: 0;
+        z-index: 0;
+    }
+    80% {
+        opacity: 0;
+        z-index: 0;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}

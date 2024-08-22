@@ -11,3 +11,4 @@ $(document).ready(function() {
     $("#gnav").removeClass("list_active"); //#gnavから.list_activeを削除
   });
 });
+alert('a');
